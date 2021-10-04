@@ -32,7 +32,7 @@
         <div>
             <h1>Por favor digite seus dados de login nos campos abaixo:</h1>
         </div>
-        <form method="POST" action="verificacao.php">
+        <form method="POST" action="./verificacao.php">
             <div class="mb-3 col-6">
                 <label for="exampleFormControlInput1" class="form-label">Login</label>
                 <input type="text" class="form-control" name="login" placeholder="Digite seu login">
@@ -43,9 +43,8 @@
                 <input type="text" class="form-control" name="senha" placeholder="Digite sua Senha">
             </div>
             <div class="d-grid gap-2 col-4">
-                <button type="button" class="btn btn-primary btn-block">Confirmar</button>
+                <button type="submit" class="btn btn-primary btn-block">Confirmar</button>
             </div>
-            
         </form>
     </div>
 
