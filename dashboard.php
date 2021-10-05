@@ -37,5 +37,11 @@
     <button>
         Emitir nota fiscal
     </button>
+    <button>
+        Adicionar Produto no estoque
+    </button>
+    <button>
+        Ver estoque
+    </button>
 </body>
 </html>
