@@ -43,5 +43,8 @@
     <button>
         Ver estoque
     </button>
+    <button>
+        Ver cadastros de pessoas no sistema
+    </button>
 </body>
 </html>
