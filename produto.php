@@ -47,7 +47,7 @@ include_once("connect.php");
     <h1>Cadastrar Produto no estoque</h1>
 
     <h5>Por favor, cadastrar o produto antes de entrar com a nota no estoque.</h5>
-    <form method="POST" action="produto.php">
+        <form method="POST" action="produto.php">
 
         <?php
             
