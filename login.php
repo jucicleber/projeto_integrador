@@ -39,7 +39,6 @@
             </div>
             <div class="mb-3 col-6">
                 <label for="exampleFormControlTextarea1" class="form-label">Senha</label>
-
                 <input type="text" class="form-control" name="senha" placeholder="Digite sua Senha">
             </div>
             <div class="d-grid gap-2 col-4">

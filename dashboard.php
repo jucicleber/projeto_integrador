@@ -37,9 +37,7 @@
     <button>
         Emitir nota fiscal
     </button>
-    <button>
-        Adicionar Produto no estoque
-    </button>
+    <a href="cadastrar_produto.php"><button>Cadastrar Produto</button></a>
     <button>
         Ver estoque
     </button>
