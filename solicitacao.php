@@ -61,7 +61,7 @@ include_once("connect.php");
             $query = "SELECT * from cargo";
             
         ?>
-        <select class="Opções" name="cargo">
+        <select class="opcoes" name="cargo">
             <option value="" selected="selected">-- Selecione a opção</option>>
             <?php
                 if ($result = $conn->query($query)) {
