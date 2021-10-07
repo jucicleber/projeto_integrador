@@ -47,7 +47,7 @@ include_once("connect.php");
     <h1>Cadastrar Produto no estoque</h1>
 
     <h5>Por favor, cadastrar o produto antes de entrar com a nota no estoque.</h5>
-        <form method="POST" action="produto.php">
+        <form method="POST" action="cadastrar_produto.php">
 
         <?php
             
@@ -57,7 +57,7 @@ include_once("connect.php");
         ?>
         <div class="row">
             <div class="col-6">
-                <select name="categoria">
+                <select name="categoria_id">
                     <option value="" selected="selected">-- Selecione a categoria</option>>
                     <?php
                 if ($result = $conn->query($query)) {
@@ -75,27 +75,27 @@ include_once("connect.php");
         <div class="row">
             <div class="col-6">
                 <h3> Nome</h3>
-                <input class="nome col-6" type="text" name="nome">
+                <input class="nome col-6" type="text" name="nome" placeholder="Digite o nome do produto.">
             </div>
         </div>
 
         <div class="row">
             <div class="col-6">
-            <h4> Preço</h4>
-            <input class="preço col-6" type="text" name="preço">
+            <h4> Preco</h4>
+            <input class="preco col-6" type="text" name="preco" placeholder="Digite o preço pago.">
             </div>
         </div>
 
         <div class="row">
             <div class="col-6">
         <h6> Marca</h6>
-        <input class="marca col-6" type="text" name="marca">
+        <input class="marca col-6" type="text" name="marca" placeholder="Digite a marca do produto.">
         </div>
             </div>
 
         <div class="row">
                 <div class="col-6">
-                    <button type="submit">Enviar informações</button>      
+                    <input type="submit" value ="Enviar informações">      
                 </div>
             </div>
 
