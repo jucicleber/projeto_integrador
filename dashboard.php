@@ -29,7 +29,7 @@
         Criar requisição
     </button>
     <button>
-        Adicionar nota no estoque
+    <a href="adicionar_nota.php"><button>Adicionar nota no estoque</button></a>
     </button>
     <button>
         Criar devolução
