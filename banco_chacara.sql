@@ -39,6 +39,7 @@ values("EPI/EPC");
 
 select * from categorias;
 
+
 create table produto(
 	id int primary key auto_increment,
 	categoria_id int not null,
