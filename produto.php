@@ -22,9 +22,7 @@ include_once("connect.php");
         color: black;
     }
 
-    h2,
     h3,
-    h4,
     h6 {
         font-size: 40px;
         color: red;
@@ -58,7 +56,7 @@ include_once("connect.php");
         ?>
         <div class="row">
             <div class="col-6">
-                <select name="categoria_id">
+                <select name="id">
                     <option value="" selected="selected">-- Selecione a categoria</option>>
                     <?php
                 if ($result = $conn->query($query)) {
@@ -77,13 +75,6 @@ include_once("connect.php");
             <div class="col-6">
                 <h3> Nome</h3>
                 <input class="nome col-6" type="text" name="nome" placeholder="Digite o nome do produto.">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-6">
-            <h4> Preco</h4>
-            <input class="preco col-6" type="text" name="preco" placeholder="Digite o preço pago.">
             </div>
         </div>
 
