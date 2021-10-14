@@ -90,7 +90,7 @@ include_once("connect.php");
                     <input type="submit" value ="Enviar informações">      
                 </div>
             </div>
-
+        
     </form>
 </body>
 

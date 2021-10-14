@@ -1,3 +1,6 @@
+<?php
+    include_once("connect.php")
+    ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -13,17 +16,34 @@
     <h1>Inserir nota no estoque. </h1>
     <h2>Certifique-se que o(s) produto(s) da nota estão cadastrado(s).</h2>
 
-    <div class="row">
-        <div class="col-6">
-            <id>Nome do produto</id>
-            <input class="nome col-6" type="text" name="nome" placeholder="Digite o nome do produto.">
+    <?php
+            
+            /* query para chamar o banc de dados. */
+            $query = "SELECT * from produto";
+            
+        ?>
+        <div class="row">
+            <div class="col-6">
+                <select name="">
+                    <option value="" selected="selected">-- Selecione o Produto</option>>
+                    <?php
+                if ($result = $conn->query($query)) {
+                    while ($row = $result->fetch_row()) {  ?>
+                    <option value="<?php echo $row[0];?>"><?php echo $row[2];?></option>
+                    <?php
+                    }
+                }
+
+            ?>
+                </select>
+            </div>
         </div>
-    </div>
+
 
     <div class="row">
         <div class="col-6">
-            <id>Marca do produto</id>
-            <input class="nome col-6" type="text" name="nome" placeholder="Digite a marca do produto.">
+            <id>Quantidade</id>
+            <input class="nome col-6" type="text" name="nome" placeholder="Digite a quantidade do produto.">
         </div>
     </div>
 
@@ -33,6 +53,9 @@
             <input class="nome col-6" type="text" name="nome" placeholder="Digite o número da nota">
         </div>
     </div>
+    <?php
+        echo date("d/m/Y H:i");
+    ?>
     
 </body>
 
