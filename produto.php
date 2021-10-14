@@ -56,7 +56,7 @@ include_once("connect.php");
         ?>
         <div class="row">
             <div class="col-6">
-                <select name="id">
+                <select name="categoria_id">
                     <option value="" selected="selected">-- Selecione a categoria</option>>
                     <?php
                 if ($result = $conn->query($query)) {
@@ -70,7 +70,7 @@ include_once("connect.php");
                 </select>
             </div>
         </div>
-
+        
         <div class="row">
             <div class="col-6">
                 <h3> Nome</h3>
