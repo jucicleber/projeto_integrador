@@ -6,7 +6,7 @@ if($_POST){
     $num_nota = $_POST["num_nota"];
     $entrada_nota = $_POST["entrada_nota"];
 
-    $query = "insert into estoque(id_produto,qtd,num_nota,entrada_nota) values('{$id_produto}',{$qtd},{$num_nota},{$entrada_nota});";
+    $query = "insert into estoque(id_produto,qtd,num_nota,entrada_nota) values($id_produto,$qtd,$num_nota,'$entrada_nota');";
     $result = $conn->query($query);
 
     if ($result) {
@@ -18,3 +18,4 @@ if($_POST){
 } 
 else {
     header("location: dashboard.php");
+}

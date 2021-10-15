@@ -19,7 +19,7 @@
     <meta charset="UTF-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-      
+    
     <title>Cadastrar Nota</title>
 
 </head>
@@ -38,7 +38,7 @@
         ?>
     <div class="row">
         <div class="col-6">
-            <select name="">
+            <select name="id_produto">
                 <option value="" selected="selected">-- Selecione o Produto</option>>
                 <?php
                 if ($result = $conn->query($query)) {
@@ -57,20 +57,21 @@
     <div class="row">
         <div class="col-6">
             <p class="qtd">Quantidade</p>
-            <input class="nome col-6" type="text" name="nome" placeholder="Digite a quantidade do produto.">
+            <input class="nome col-6" type="text" name="qtd" placeholder="Digite a quantidade do produto.">
         </div>
     </div>
 
     <div class="row">
         <div class="col-6">
             <p class="num_nota">Número da nota</p>
-            <input class="nome col-6" type="text" name="nome" placeholder="Digite o número da nota">
+            <input class="nome col-6" type="text" name="num_nota" placeholder="Digite o número da nota">
         </div>
     </div>
     <?php
-        
+        $data_hora=date("Y-m-d H:i:s");
         echo date("d/m/Y H:i");
     ?>
+    <input type="hidden" name="entrada_nota" value="<?php echo $data_hora;?>">
     <div class="row">
         <div class="col-6">
             <input type="submit" value="Enviar informações">
