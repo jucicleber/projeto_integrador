@@ -4,7 +4,7 @@ $username = "root";
 $password = "";
 
 // Create connection
-$conn = new mysqli('localhost:3307', 'root', '', 'chacara');
+$conn = new mysqli('localhost:3307', 'root', 'root', 'chacara');
 
 // Check connection
 if ($conn->connect_error) {

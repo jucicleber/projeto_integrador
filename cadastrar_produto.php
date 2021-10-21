@@ -5,7 +5,7 @@ if($_POST){
     $nome = $_POST["nome"];
     $marca = $_POST["marca"];
 
-    $query = "insert into produto(categoria_id,nome,marca) values($categoria_id,'{$nome}','{$marca}');";
+    $query = "insert into produto(categoria_id,nome,marca) values('{$categoria_id}','{$nome}','{$marca}');";
     $result = $conn->query($query);
   
     if ($result) {

@@ -4,9 +4,9 @@ if($_POST){
     $id_produto = $_POST["id_produto"]; 
     $qtd = $_POST["qtd"];
     $num_nota = $_POST["num_nota"];
-    $entrada_nota = $_POST["entrada_nota"];
+    //$data_hora = $_POST["data_hora"];
 
-    $query = "insert into estoque(id_produto,qtd,num_nota,entrada_nota) values($id_produto,$qtd,$num_nota,'$entrada_nota');";
+    $query = "insert into estoque(id_produto,qtd,num_nota) values($id_produto,$qtd,$num_nota);";
     $result = $conn->query($query);
 
     if ($result) {
