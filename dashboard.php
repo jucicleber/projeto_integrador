@@ -29,7 +29,7 @@
         Criar requisição
     </button>
     <button>
-    <a href="adicionar_nota.php"><button>Adicionar nota no estoque</button></a>
+        <a href="adicionar_nota.php"><button>Adicionar nota no estoque</button></a>
     </button>
     <button>
         Criar devolução
@@ -37,9 +37,9 @@
     <button>
         Emitir nota fiscal
     </button>
-    <a href="produto.php"><button>Cadastrar Produto</button></a>
+        <a href="produto.php"><button>Cadastrar Produto</button></a>
     <button>
-        Ver estoque
+        <a href="ver_saldo.php"><button>Ver estoque</button></a>
     </button>
     <button>
         Ver cadastros de pessoas no sistema
