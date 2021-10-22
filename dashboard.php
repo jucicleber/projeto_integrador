@@ -42,7 +42,7 @@
         <a href="ver_saldo.php"><button>Ver estoque</button></a>
     </button>
     <button>
-        Ver cadastros de pessoas no sistema
+        Ver cadastros de pessoas no sistema.
     </button>
 </body>
 </html>
