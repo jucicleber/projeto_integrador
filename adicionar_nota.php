@@ -28,7 +28,7 @@
 <body>
     <h1>Inserir nota no estoque. </h1>
     <h2>Certifique-se que o(s) produto(s) da nota esta(o) cadastrado(s).</h2>
-    <h3>Independete de quantos produtos tem na nota, favor inserir um produto por vez.</h3>
+    <h3>Independete de quantos produtos tem na nota, favor cadastrar um produto por vez.</h3>
     <form method="POST" action="ver_estoque.php">
     <?php
             
@@ -67,12 +67,16 @@
             <input class="nome col-6" type="text" name="num_nota" placeholder="Digite o número da nota">
         </div>
     </div>
+    <?php
+        $data_hora=date("Y-m-d H:i:s");
+        echo date("d/m/Y H:i");
+    ?>
+    <input type="hidden" name="entrada_nota" value="<?php echo $data_hora;?>">
     <div class="row">
         <div class="col-6">
-        <input type="submit" value="Enviar informações">
+            <input type="submit" value="Enviar informações">
         </div>
     </div>
-
 </body>
 
 </html>
