@@ -26,7 +26,7 @@
     <h3>Ao sistema Chácara São João</h3>
     <h2>Qual processo vamos executar? Selecione nos botões abaixo.</h2>
     <button>
-        Criar requisição
+        <a href="criar_requisicao.php"><button>Criar requisição</button></a>
     </button>
     <button>
         <a href="adicionar_nota.php"><button>Adicionar nota no estoque</button></a>

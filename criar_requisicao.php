@@ -34,14 +34,13 @@ include_once("connect.php");
 <div class="row">
         <div class="col-6">
             <p class="qtd">Quantidade</p>
-            <input class="nome col-6" type="text" name="qtd" placeholder="Digite a quantidade a requisitar do produto.">
+            <input class="quantidade col-6" type="text" name="qtd" placeholder="Digite a quantidade ">
         </div>
     </div>
 
 
 
 <?php
-          
             /* query para chamar o banc de dados. */
             $query = "SELECT * from produto";
             

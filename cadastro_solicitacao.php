@@ -8,10 +8,11 @@ if($_POST){
 
     $query = "insert into solicitacao(nome,email,matricula,cargo_id) values('{$nome}','{$email}',{$matricula},{$cargo});";
     if ($result = $conn->query($query)) {
-        echo 'Solicitação realizada com sucesso!!!';
+        echo 'Solicitação realizada com sucesso!!!';   
     }
     else{
         echo 'Os dados não conferem com nosso banco de dados!!!';
+        
     }
 } 
 else {
