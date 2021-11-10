@@ -32,7 +32,7 @@
         <a href="adicionar_nota.php"><button>Adicionar nota no estoque</button></a>
     </button>
     <button>
-        Criar devolução
+        <a href="criar_devolucao.php"><button>Criar devolução</button></a>
     </button>
     <button>
         Emitir nota fiscal
