@@ -4,16 +4,20 @@ if($_POST){
     $colaborador = $_POST["colaborador"];
     $quantidade = $_POST["qtd"];
     $produto = $_POST["id_produto"];
+    $id_requisicao = $_POST["id_requisicao"];
 
     
-}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Enviar Devolução</title>
-</head>
-<body>
+
+    $query = "insert into devolucao(id_funcionario, id_produto, quantidade, id_requisicao) values('{$colaborador}',{$quantidade},'{$produto}',{$id_requisicao})";
+    if ($result = $conn->query($query)) {
+        $id_requisicao = $conn->insert_id;
+        header("Location:mostrar_devolucao.php?id_devolucao=$id_devolucao");
+        die();
     
-</body>
-</html>
+    else{
+        echo 'Os dados não conferem com nosso banco de dados!!!';
+    }
+    }
+    else {
+        header("location: criar_devolucao.php");
+} 

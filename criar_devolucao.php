@@ -41,7 +41,7 @@ include_once("connect.php");
             $query = "SELECT * from produto";
             
         ?>
-        
+
     <div class="row">
         <div class="col-6">
             <select name="id_produto">
@@ -58,6 +58,27 @@ include_once("connect.php");
             </select>
         </div>
     </div>
+
+    <?php
+    $query = "SELECT * from requisicao";
+            
+            ?>
+        <div class="row">
+            <div class="col-6">
+                <select name="id_requisicao">
+                    <option value="" selected="selected">-- Selecione a Requisição</option>>
+                    <?php
+                    if ($result = $conn->query($query)) {
+                        while ($row = $result->fetch_row()) {  ?>
+                    <option value="<?php echo $row[0];?>"><?php echo $row[0];?></option>
+                    <?php
+                        }
+                    }
+    
+                ?>
+                </select>
+            </div>
+        </div>
 
     <button type="submit" >Enviar informações</button>
 
