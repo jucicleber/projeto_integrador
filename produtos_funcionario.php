@@ -15,7 +15,7 @@ include_once("connect.php");
             $query = "SELECT * from funcionarios";
             
         ?>
-        <div class="row bg-primary">
+        <div class="row">
             <div class="col-6">
     <select class="opcoes" name="colaborador">
         <option value="" selected="selected">-- Selecione o colaborador</option>>

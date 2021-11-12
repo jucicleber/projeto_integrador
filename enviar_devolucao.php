@@ -2,18 +2,18 @@
 include_once("connect.php");
 if($_POST){
     $colaborador = $_POST["colaborador"];
-    $quantidade = $_POST["qtd"];
     $produto = $_POST["id_produto"];
+    $quantidade = $_POST["qtd"]; 
     $id_requisicao = $_POST["id_requisicao"];
 
     
 
-    $query = "insert into devolucao(id_funcionario, id_produto, quantidade, id_requisicao) values('{$colaborador}',{$quantidade},'{$produto}',{$id_requisicao})";
+    $query = "insert into devolucao(id_funcionario, id_produto, quantidade, id_requisicao) values('{$colaborador}','{$produto}',{$quantidade},{$id_requisicao})";
     if ($result = $conn->query($query)) {
-        $id_devolucao = $conn->insert_id;
-        header("Location:mostrar_devolucao.php?id_devolucao=$id_devolucao");
-    
+        header("Location:mostrar_devolucao.php");
+    }
     else{
         echo 'Os dados não conferem com nosso banco de dados!!!';
+        
     }
 }
