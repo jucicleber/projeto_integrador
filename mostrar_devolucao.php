@@ -1,6 +1,5 @@
 <?php
 include_once("connect.php");
-$id_devolucao  = $_GET["id_devolucao"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,16 +17,23 @@ $id_devolucao  = $_GET["id_devolucao"];
 <body>
     <div class="container">
     <?php
+if($_POST){
+    $colaborador = $_POST["colaborador"];
+    $produto = $_POST["id_produto"];
+    $quantidade = $_POST["qtd"]; 
+    $id_requisicao = $_POST["id_requisicao"];
+
+}
     $query = "select d.id_requisicao, f.nome funcionario, p.nome produto, d.quantidade, d.id_devolucao from devolucao d  
     join funcionarios f on d.id_funcionario = d.id_funcionario 
     join produto p on p.id_produto = d.id_produto
-    where d.id_devolucao = $id_devolucao";
+    where d.id_requisicao = d.id_requisicao";
 
     if ($result = $conn->query($query)) {
         while ($row = $result->fetch_row()) {  ?>
 
     <h1>Requisição: <?= $row['0'];?></h1></br>
-
+    <h1>Devolução da requisição <?= $row['0'];?></h1></br>
     <h2>À Chacará São João cnpj: 1212121122121<h2><br/>
 
     <p>Está recebendo em caracter de devolução do colaborador
@@ -56,9 +62,6 @@ $id_devolucao  = $_GET["id_devolucao"];
     <p>Ass ______________________________________________</p>
 
     <?php }
-    }
-    else{
-        echo $conn->error;
     }
 ?>
     </div>

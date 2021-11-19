@@ -10,7 +10,7 @@ if($_POST){
 
     $query = "insert into devolucao(id_funcionario, id_produto, quantidade, id_requisicao) values('{$colaborador}','{$produto}',{$quantidade},{$id_requisicao})";
 
-    $query2 = "UPDATE estoque SET qtd = qtd+{$quantidade} WHERE id_produto = {$produto}";
+    $query2 = "UPDATE estoque SET qtd+{$quantidade} WHERE id_produto = {$produto}";
     if ($result = $conn->query($query)) {
         header("Location:mostrar_devolucao.php");
     }

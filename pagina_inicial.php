@@ -35,10 +35,10 @@
         <h1>Sistema Chácara São João</h1>
         <h2>O que deseja fazer?</h2>
         <button class="bt1" type="button" form="f_cadstro">
-            Fazer Login
+        <a href="login.php"><button>Fazer login</button></a>
         </button>
         <button class="bt2" type="button" form="f_cadstro">
-            Solicitar Cadastro
+        <a href="solicitacao.php"><button>Solicitar cadastro</button></a>
         </button>
     </body>
 
